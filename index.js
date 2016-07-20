@@ -14,7 +14,9 @@ let bot = new Bot({
 bot.updateBotConfiguration();
 
 bot.onTextMessage((message) => {
+    handler.message1();
     message.reply(message.body);
+    message.addResponseKeyboard(["Yes","No"], true, "sexyz22")
 });
 
 // Set up your server and start listening

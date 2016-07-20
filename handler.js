@@ -3,7 +3,7 @@
  */
 
 module.exports = {
-  foo: function () {
+  message1: function () {
     console.log("foo function");
   },
   bar: function () {

@@ -2,6 +2,7 @@
 let util = require('util');
 let http = require('http');
 let Bot = require('@kikinteractive/kik');
+let handler = require('./handler');
 
 // Configure the bot API endpoint, details for your bot
 let bot = new Bot({

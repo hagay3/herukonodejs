@@ -22,5 +22,3 @@ app.listen(app.get('port'), function() {
 });
 
 
-
-<script src="http://cdn.kik.com/kik/2.3.6/kik.js"></script>

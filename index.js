@@ -10,8 +10,7 @@ baseUrl: 'https://whispering-headland-51239.herokuapp.com/'
 });
 bot.updateBotConfiguration();
 bot.onTextMessage((message) => {
-//message.reply(message.body);
-message.reply("Hagai");
+message.reply(message.body + message.username);
 });
 // Set up your server and start listening
 let server = http

@@ -25,7 +25,7 @@ bot.onTextMessage((message) => {
 
   const replyM =  Bot.Message.text("blipppp");
 
-  replyM.addResponseKeyboard(["yes", "No"], true);
+  replyM.addResponseKeyboard(["yes", "No"]);
   bot.send(replyM, message.from);
 
 });

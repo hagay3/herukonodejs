@@ -23,19 +23,11 @@ bot.onStartChattingMessage((message) => {
 bot.onTextMessage((message) => {
   message.reply(message.body);
 
-<<<<<<< HEAD
   const replyM =  Bot.Message.text("blipppp");
 
   replyM.addResponseKeyboard(["yes", "No"]);
   bot.send(replyM, message.from);
 
-=======
-  bot.getUserProfile(message.from)
-    .then((user) => {
-      bot.send(message.addResponseKeyboard(["Yes", "No"], true, user));
-    //message.reply(Bot.Message.text("I don't understand what you are trying to ask me. Please reply with something I can work with.").addResponseKeyboard(["Homework"],false,user))
-    });
->>>>>>> 75c014f6f6371c65ffc10231869c21ab3a4eeaa3
 });
 
 // Set up your server and start listening

@@ -10,8 +10,10 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "@kikinteractive/kik": "^2.0.8",
     "ejs": "2.4.1",
-    "express": "4.13.3"
+    "express": "4.13.3",
+    "util": "^0.10.3"
   },
   "repository": {
     "type": "git",

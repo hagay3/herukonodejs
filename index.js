@@ -10,7 +10,7 @@ baseUrl: 'https://whispering-headland-51239.herokuapp.com/'
 });
 bot.updateBotConfiguration();
 bot.onTextMessage((message) => {
-message.reply(message.body + message.username + " check101");
+message.reply(message);
 });
 // Set up your server and start listening
 let server = http

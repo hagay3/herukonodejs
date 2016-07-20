@@ -11,7 +11,8 @@ let bot = new Bot({
 });
 bot.updateBotConfiguration();
 bot.onTextMessage((message) = > {
-    message.reply(message.body + "from: " + message.from + "id: " + message.id);
+    message.reply(message.body);
+    //message.reply(message.body + "from: " + message.from + "id: " + message.id);
 });
 // Set up your server and start listening
 let server = http

@@ -9,14 +9,14 @@ let bot = new Bot({
     apiKey: '8d5fd56b-d95e-476c-ac5b-43d89c4a22ce',
     baseUrl: 'https://whispering-headland-51239.herokuapp.com/'
 });
+
 bot.updateBotConfiguration();
-bot.onTextMessage((message) = > {
+
+bot.onTextMessage((message) => {
     message.reply(message.body);
-    //message.reply(message.body + "from: " + message.from + "id: " + message.id);
 });
+
 // Set up your server and start listening
 let server = http
     .createServer(bot.incoming())
     .listen(process.env.PORT || 8080);
-
-

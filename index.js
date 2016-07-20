@@ -20,6 +20,16 @@ bot.onStartChattingMessage((message) => {
     });
 });
 
+bot.onTextMessage('Ts',(message) => {
+  handler.message1();
+  //message.reply(message.body);
+  //const replyM =  Bot.Message.text("Are you a woman or a man?");
+  //replyM.addResponseKeyboard(["Woman", "Man"]);
+  //bot.send(replyM, message.from);
+
+});
+
+
 bot.onTextMessage('Hi',(message) => {
   //message.reply(message.body);
 

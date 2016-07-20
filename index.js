@@ -20,13 +20,14 @@ bot.onStartChattingMessage((message) => {
     });
 });
 
-bot.onTextMessage((message) => {
+bot.onTextMessage('Hi',(message) => {
   message.reply(message.body);
 
   const replyM =  Bot.Message.text("blipppp");
 
   replyM.addResponseKeyboard(["yes", "No"]);
   bot.send(replyM, message.from);
+
 
 });
 

@@ -25,8 +25,7 @@ bot.onTextMessage((message) => {
 
   bot.getUserProfile(message.from)
     .then((user) => {
-      console.log(user);
-      message.addResponseKeyboard(["Yes", "No"], false, user);
+      message.addResponseKeyboard(["Yes", "No"], true, user);
     });
 });
 

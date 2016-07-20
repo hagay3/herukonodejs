@@ -25,7 +25,8 @@ bot.onTextMessage((message) => {
 
   bot.getUserProfile(message.from)
     .then((user) => {
-      message.addResponseKeyboard(["Yes", "No"], true, user);
+      //message.addResponseKeyboard(["Yes", "No"], true, user);
+      message.reply(bot.Message.text("Are you happy?")).message.addResponseKeyboard(["Yes", "No"], true, user);
     });
 });
 

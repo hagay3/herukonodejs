@@ -25,8 +25,7 @@ bot.onTextMessage((message) => {
 
   bot.getUserProfile(message.from)
     .then((user) => {
-      console.log(message);
-      //message.addResponseKeyboard(["Yes", "No"], true, user);
+      message.addResponseKeyboard(["Yes", "No"], [true], [user]);
     //message.reply(Bot.Message.text("I don't understand what you are trying to ask me. Please reply with something I can work with.").addResponseKeyboard(["Homework"],false,user))
     });
 });

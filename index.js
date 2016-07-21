@@ -103,6 +103,7 @@ bot.onTextMessage(/20K/,(message) => {
   const recommendation =  Bot.Message.text(handler.calc(per));
   bot.send(recommendation, message.from);
 
+  console.log("User: " + message.from + " " + per.displayPerson());
 });
 
 // Set up your server and start listening

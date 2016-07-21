@@ -87,8 +87,8 @@ bot.onTextMessage(/live/,(message) => {
 
   per.lowSalary = message.body === "Under 20K" ? true : false;
 
-  console.log(handler.calc(per));
-
+  const recommendation =  Bot.Message.text(handler.calc(per));
+  bot.send(recommendation, message.from);
 
 });
 // Set up your server and start listening

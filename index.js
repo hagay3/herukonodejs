@@ -22,6 +22,8 @@ bot.updateBotConfiguration();
 bot.onStartChattingMessage((message) => {
 
   const replyMessage1 =  Bot.Message.text("Hey "+message.from + ", I will ask you a series of questions in order to recommend a personalize retirement plan.");
+  bot.send(replyMessage1, message.from);
+
 
   const replyMessage =  Bot.Message.text("Are you a woman or a man?");
   replyMessage.addResponseKeyboard(["I`m a Woman", "I`m a Man"]);
@@ -33,6 +35,7 @@ bot.onTextMessage('Hi',(message) => {
   //message.reply(message.body);
 
   const replyMessage1 =  Bot.Message.text("Hey "+message.from + ", I will ask you a series of questions in order to recommend a personalize retirement plan.");
+  bot.send(replyMessage1, message.from);
 
   const replyMessage =  Bot.Message.text("Are you a woman or a man?");
   replyMessage.addResponseKeyboard(["I`m a Woman", "I`m a Man"]);

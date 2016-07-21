@@ -38,6 +38,18 @@ bot.onTextMessage(/Woman|Man/,(message) => {
 
 });
 
+bot.onTextMessage(/18-25|26-45/,(message) => {כ 
+  let replyMessage;
+
+  if (message.body === "^18-25$"){
+    replyMessage =  Bot.Message.text("Im recommend you to buy מנורה מבטחים");
+  } else {
+    replyMessage =  Bot.Message.text("Im recommend you to buy ילין מבטחים");
+  }
+  bot.send(replyMessage, message.from);
+
+});
+
 // Set up your server and start listening
 let server = http
   .createServer(bot.incoming())

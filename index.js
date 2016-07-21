@@ -86,7 +86,9 @@ bot.onTextMessage(/live/,(message) => {
   bot.send(replyMessage, message.from);
 
   per.lowSalary = message.body === "Under 20K" ? true : false;
-  per.displayPerson();
+
+  console.log(handler.calc(per));
+
 
 });
 // Set up your server and start listening

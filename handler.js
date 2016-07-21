@@ -25,15 +25,17 @@ module.exports = {
       return result +" , the rest of your salary sholud be depoistied to a Yalin Lapidot Provident Fund (kupat gemel), Stocks track, its yields are highest in the last 5 years, according to gemel-net";
     }
   },
-  pensioFunds: function () {
-   return "\n1. Phoenix pension in Goverment Bonds track. its yields are highest in the last 5 years \n2. Harel Pension: its yields are highest in the last 8 years, according to Pensya-net";
+  pensioFunds: function (isSingle) {
+    let  result =  "\n1. Phoenix pension in Goverment Bonds track. its yields are highest in the last 5 years \n2. Harel Pension: its yields are highest in the last 8 years, according to Pensya-net";
+    if (isSingle) {
+        result = result + "dont forget to update your fund on your maritial status to avoid paying unneeded premiums, keep updating your status every 2 years until you get married";
+    }
+    return result;
 
   },
   resultfullPension: function(isSingle) {
     let result =  "Please deposit to one of the folliwing Pension funds:" + this.pensioFunds();
-    if (isSingle) {
-      result = result + "dont forget to update your fund on your maritial status to avoid paying unneeded premiums, keep updating your status every 2 years until you get married"
-    }
+
 
     return result
   }

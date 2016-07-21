@@ -51,6 +51,40 @@ bot.onTextMessage(/Married|Not\smarried|Have\sa\swedding\sdate/,(message) => {
 
 });
 
+
+bot.onTextMessage(/0|1|2|3|4|5/,(message) => {
+
+
+  const replyMessage =  Bot.Message.text("Do you have manager inssurance?");
+
+  replyMessage.addResponseKeyboard(["I have","I don't have"]);
+
+  bot.send(replyMessage, message.from);
+
+});
+
+bot.onTextMessage(/I have|I\sdon't\shave/,(message) => {
+
+
+  const replyMessage =  Bot.Message.text("Do you believe in the next 30 years humans will live up to age 100 ?");
+
+  replyMessage.addResponseKeyboard(["Will live","Won't live"]);
+
+  bot.send(replyMessage, message.from);
+
+});
+
+
+bot.onTextMessage(/live/,(message) => {
+
+
+  const replyMessage =  Bot.Message.text("What is your salary?");
+
+  replyMessage.addResponseKeyboard(["Under 20K","Above 20K"]);
+
+  bot.send(replyMessage, message.from);
+
+});
 // Set up your server and start listening
 let server = http
   .createServer(bot.incoming())

@@ -20,31 +20,21 @@ bot.onStartChattingMessage((message) => {
     });
 });
 
-bot.onTextMessage('Ts',(message) => {
-  handler.message1();
-  //message.reply(message.body);
-  //const replyM =  Bot.Message.text("Are you a woman or a man?");
-  //replyM.addResponseKeyboard(["Woman", "Man"]);
-  //bot.send(replyM, message.from);
-
-});
-
-
-bot.onTextMessage('Hi',(message) => {
+bot.onTextMessage('Hi bot',(message) => {
   //message.reply(message.body);
 
-  const replyM =  Bot.Message.text("Are you a woman or a man?");
-  replyM.addResponseKeyboard(["Woman", "Man"]);
-  bot.send(replyM, message.from);
+  const replyMessage =  Bot.Message.text("Are you a woman or a man?");
+  replyMessage.addResponseKeyboard(["Woman", "Man"]);
+  bot.send(replyMessage, message.from);
 
 });
 
 bot.onTextMessage(/Woman|Man/,(message) => {
   //message.reply(message.body);
 
-  const replyM =  Bot.Message.text("How old are you?");
-  replyM.addResponseKeyboard(["18-25", "26-35"]);
-  bot.send(replyM, message.from);
+  const replyMessage =  Bot.Message.text("How old are you?");
+  replyMessage.addResponseKeyboard(["18-25", "26-45"]);
+  bot.send(replyMessage, message.from);
 
 });
 

@@ -38,7 +38,7 @@ bot.onTextMessage('Hi',(message) => {
 bot.onTextMessage(/Woman|Man/,(message) => {
   //message.reply(message.body);
 
-  conosle.log(message.body);
+  console.log(message.body);
 
   const replyMessage =  Bot.Message.text("Are you married or you have a wedding date?");
   replyMessage.addResponseKeyboard(["Married", "Not married","Have a wedding date"]);

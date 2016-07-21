@@ -52,10 +52,10 @@ bot.onTextMessage(/Married|Not\smarried|Have\sa\swedding\sdate/,(message) => {
 });
 
 
-bot.onTextMessage(/0|1|2|3|4|5/,(message) => {
+bot.onTextMessage(/^0$|^1$|^2$|^3$|^4$|^5$/,(message) => {
 
 
-  const replyMessage =  Bot.Message.text("Do you have manager inssurance?");
+  const replyMessage =  Bot.Message.text("Do you have a manager inssurance before 2001?");
 
   replyMessage.addResponseKeyboard(["I have","I don't have"]);
 

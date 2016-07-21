@@ -104,6 +104,7 @@ bot.onTextMessage(/20K/,(message) => {
   bot.send(recommendation, message.from);
 
   if(per.getLink !== undefined) {
+    bot.send(Bot.Message.text("Here is some more information"), message.from);
     const recommendation_link = Bot.Message.link(per.getLink);
     bot.send(recommendation_link, message.from);
   }

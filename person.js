@@ -10,6 +10,7 @@ module.exports = class Person {
     this.hasOldMI = hasOldMI;
     this.lowSalary = lowSalary;
     this.oldAge = oldAge;
+    this.link = link;
   }
 
   set setIsMale(value){
@@ -58,6 +59,14 @@ module.exports = class Person {
 
   get getOldAge(){
     return this.oldAge;
+  }
+
+  set setLink(value){
+    this.link = value;
+  }
+
+  get getLink(){
+    return this.link;
   }
   
 

@@ -103,6 +103,11 @@ bot.onTextMessage(/20K/,(message) => {
   const recommendation =  Bot.Message.text(handler.calc(per));
   bot.send(recommendation, message.from);
 
+  if(per.getLink !== undefined) {
+    const recommendation_link = Bot.Message.text(per.getLink);
+    bot.send(per.getLink, message.from);
+  }
+
   console.log("User: " + message.from + " " + per.displayPerson());
 });
 

@@ -45,7 +45,7 @@ bot.onTextMessage(/Married|Not\smarried|Have\sa\swedding\sdate/,(message) => {
 
   const replyMessage =  Bot.Message.text("How many childrens do you have?");
 
-  replyMessage.addResponseKeyboard([0,1,2,3,4,5]);
+  replyMessage.addResponseKeyboard(["0","1","2","3","4","5"]);
 
   bot.send(replyMessage, message.from);
 

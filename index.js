@@ -3,6 +3,12 @@ let util = require('util');
 let http = require('http');
 let Bot = require('@kikinteractive/kik');
 let handler = require('./handler');
+let Person = require('./person');
+
+let per = new Person();
+/*someone.setKids = 3;
+console.log(someone.getKids);
+someone.display();*/
 
 // Configure the bot API endpoint, details for your bot
 let bot = new Bot({
@@ -32,10 +38,10 @@ bot.onTextMessage('Hi',(message) => {
 bot.onTextMessage(/Woman|Man/,(message) => {
   //message.reply(message.body);
 
+  conosle.log(message.body);
+
   const replyMessage =  Bot.Message.text("Are you married or you have a wedding date?");
-
-    replyMessage.addResponseKeyboard(["Married", "Not married","Have a wedding date"]);
-
+  replyMessage.addResponseKeyboard(["Married", "Not married","Have a wedding date"]);
   bot.send(replyMessage, message.from);
 
 });

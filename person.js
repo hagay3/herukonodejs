@@ -63,10 +63,10 @@ module.exports = class Person {
 
   displayPerson() {
     console.log("isMale: " + this.isMale + 
-                "isMarried: " + this.married + 
-                "kids:  " + this.kids + 
-                "hasOldMI: " + this.hasOldMI + 
-                "lowSalary " + this.lowSalary +
-                "oldAge " + this.oldAge);
+                " isMarried: " + this.married +
+                " kids:  " + this.kids +
+                " hasOldMI: " + this.hasOldMI +
+                " lowSalary " + this.lowSalary +
+                " oldAge " + this.oldAge);
   }
 };

@@ -20,32 +20,36 @@ bot.onStartChattingMessage((message) => {
     });
 });
 
-bot.onTextMessage('Hi bot',(message) => {
+bot.onTextMessage('היי',(message) => {
   //message.reply(message.body);
 
-  const replyMessage =  Bot.Message.text("Are you a woman or a man?");
-  replyMessage.addResponseKeyboard(["Woman", "Man"]);
+  const replyMessage =  Bot.Message.text("האם אתה גבר או אשה?");
+  replyMessage.addResponseKeyboard(["אשה", "גבר"]);
   bot.send(replyMessage, message.from);
 
 });
 
-bot.onTextMessage(/Woman|Man/,(message) => {
+bot.onTextMessage(/אשה|גבר/,(message) => {
   //message.reply(message.body);
 
-  const replyMessage =  Bot.Message.text("How old are you?");
-  replyMessage.addResponseKeyboard(["18-25", "26-45"]);
+  const replyMessage =  Bot.Message.text("האם אתה נשוי או שיש תאריך לחתונה?");
+
+  if (p.getIsMan())
+    replyMessage.addResponseKeyboard(["נשוי", "לא נשוי"]);
+  else
+    replyMessage.addResponseKeyboard(["נשואה", "לא נשואה"]);
+
   bot.send(replyMessage, message.from);
 
 });
 
-bot.onTextMessage(/18-25|26-45/,(message) => {
-  let replyMessage;
+bot.onTextMessage(/נשוי|לא נשוי|נשואה|לא נשואה/,(message) => {
+  
 
-  if (message.body === "^18-25$"){
-    replyMessage =  Bot.Message.text("Im recommend you to buy מנורה מבטחים");
-  } else {
-    replyMessage =  Bot.Message.text("Im recommend you to buy ילין מבטחים");
-  }
+  const replyMessage =  Bot.Message.text("מה מספר הילדים שלך?");
+
+  replyMessage.addResponseKeyboard([0,1,2,3,4,5]);
+
   bot.send(replyMessage, message.from);
 
 });

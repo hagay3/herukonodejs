@@ -16,7 +16,7 @@ module.exports = {
     {
       return "according to your response -  a managers insurance is the right choise for you, please consider purchasing IDI Managers insurance , Generic track, it had the highest yields in the last 8 & 5 years, according to bituach-net";
     }
-    person.setLink("http://www.eku.co.il/%D7%9E%D7%A7%D7%93%D7%9E%D7%99-%D7%A7%D7%A6%D7%91%D7%94-%D7%9E%D7%95%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%91%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%9E%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9C%D7%90-%D7%91%D7%98/");
+    person.setLink = "http://www.eku.co.il/%D7%9E%D7%A7%D7%93%D7%9E%D7%99-%D7%A7%D7%A6%D7%91%D7%94-%D7%9E%D7%95%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%91%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%9E%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9C%D7%90-%D7%91%D7%98/";
     if(isLowSalary) {
       return this.resultfullPension(!isMarried);
     }

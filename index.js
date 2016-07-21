@@ -20,7 +20,7 @@ bot.onStartChattingMessage((message) => {
     });
 });
 
-bot.onTextMessage('היי',(message) => {
+bot.onTextMessage('Hi',(message) => {
   //message.reply(message.body);
 
   const replyMessage =  Bot.Message.text("Are you a woman or a man?");

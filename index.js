@@ -23,30 +23,27 @@ bot.onStartChattingMessage((message) => {
 bot.onTextMessage('היי',(message) => {
   //message.reply(message.body);
 
-  const replyMessage =  Bot.Message.text("האם אתה גבר או אשה?");
-  replyMessage.addResponseKeyboard(["אשה", "גבר"]);
+  const replyMessage =  Bot.Message.text("Are you a woman or a man?");
+  replyMessage.addResponseKeyboard(["I`m a Woman", "I`m a Man"]);
   bot.send(replyMessage, message.from);
 
 });
 
-bot.onTextMessage(/אשה|גבר/,(message) => {
+bot.onTextMessage(/Woman|Man/,(message) => {
   //message.reply(message.body);
 
-  const replyMessage =  Bot.Message.text("האם אתה נשוי או שיש תאריך לחתונה?");
+  const replyMessage =  Bot.Message.text("Are you married or you have a wedding date?");
 
-  if (p.getIsMan())
-    replyMessage.addResponseKeyboard(["נשוי", "לא נשוי"]);
-  else
-    replyMessage.addResponseKeyboard(["נשואה", "לא נשואה"]);
+    replyMessage.addResponseKeyboard(["Married or have a wedding date", "Not married"]);
 
   bot.send(replyMessage, message.from);
 
 });
 
-bot.onTextMessage(/נשוי|לא נשוי|נשואה|לא נשואה/,(message) => {
-  
+bot.onTextMessage(/Married|Not married/,(message) => {
 
-  const replyMessage =  Bot.Message.text("מה מספר הילדים שלך?");
+
+  const replyMessage =  Bot.Message.text("How many childrens do you have?");
 
   replyMessage.addResponseKeyboard([0,1,2,3,4,5]);
 

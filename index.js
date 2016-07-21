@@ -38,7 +38,7 @@ bot.onTextMessage(/Woman|Man/,(message) => {
 
 });
 
-bot.onTextMessage(/18-25|26-45/,(message) => {כ 
+bot.onTextMessage(/18-25|26-45/,(message) => {
   let replyMessage;
 
   if (message.body === "^18-25$"){

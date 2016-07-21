@@ -103,7 +103,16 @@ bot.onTextMessage(/20K/,(message) => {
   const recommendation =  Bot.Message.text(handler.calc(per));
   bot.send(recommendation, message.from);
 
+  if(per.getLink !== undefined) {
+    const recommendation_link = Bot.Message.link(per.getLink);
+    bot.send(recommendation_link, message.from);
+  }
+
   console.log("User: " + message.from + " " + per.displayPerson());
+});
+
+bot.onTextMessage((message) => {
+  bot.send(Bot.Message.text("Be nice, say Hi"), message.from);
 });
 
 // Set up your server and start listening

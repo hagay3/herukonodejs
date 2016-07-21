@@ -3,13 +3,14 @@
  */
 'use strict';
 module.exports = class Person {
-  constructor(isMale, married, kids, hasOldMI, lowSalary, oldAge) {
+  constructor(isMale, married, kids, hasOldMI, lowSalary, oldAge, link) {
     this.isMale = isMale;
     this.married = married;
     this.kids = kids;
     this.hasOldMI = hasOldMI;
     this.lowSalary = lowSalary;
     this.oldAge = oldAge;
+    this.link = link;
   }
 
   set setIsMale(value){
@@ -58,6 +59,14 @@ module.exports = class Person {
 
   get getOldAge(){
     return this.oldAge;
+  }
+
+  set setLink(value){
+    this.link = value;
+  }
+
+  get getLink(){
+    return this.link;
   }
   
 

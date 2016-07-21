@@ -3,7 +3,7 @@
  */
 'use strict';
 module.exports = class Person {
-  constructor(isMale, married, kids, hasOldMI, lowSalary, oldAge) {
+  constructor(isMale, married, kids, hasOldMI, lowSalary, oldAge, link) {
     this.isMale = isMale;
     this.married = married;
     this.kids = kids;

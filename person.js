@@ -3,12 +3,13 @@
  */
 'use strict';
 module.exports = class Person {
-  constructor(isMale, married, kids, hasOldMI, lowSalary) {
+  constructor(isMale, married, kids, hasOldMI, lowSalary, oldAge) {
     this.isMale = isMale;
     this.married = married;
     this.kids = kids;
     this.hasOldMI = hasOldMI;
     this.lowSalary = lowSalary;
+    this.oldAge = oldAge;
   }
 
   set setIsMale(value){
@@ -50,9 +51,22 @@ module.exports = class Person {
   get getLowSalary(){
     return this.lowSalary;
   }
+
+  set setOldAge(value){
+    this.oldAge = value;
+  }
+
+  get getOldAge(){
+    return this.oldAge;
+  }
   
 
-  display() {
-    console.log(this.isMale + " " + this.married + " " + this.kids + " " + this.hasOldMI + " " + this.lowSalary );
+  displayPerson() {
+    console.log("isMale: " + this.isMale + 
+                "isMarried: " + this.married + 
+                "kids:  " + this.kids + 
+                "hasOldMI: " + this.hasOldMI + 
+                "lowSalary " + this.lowSalary +
+                "oldAge " + this.oldAge);
   }
 };

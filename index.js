@@ -6,9 +6,9 @@ let handler = require('./handler');
 let Person = require('./person');
 
 let per = new Person();
-/*someone.setKids = 3;
-console.log(someone.getKids);
-someone.display();*/
+/*per.setKids = 3;
+console.log(per.getKids);
+ per.display();*/
 
 // Configure the bot API endpoint, details for your bot
 let bot = new Bot({
@@ -36,9 +36,8 @@ bot.onTextMessage('Hi',(message) => {
 });
 
 bot.onTextMessage(/Woman|Man/,(message) => {
-  //message.reply(message.body);
 
-  console.log(message.body);
+  per.setIsMale = message.body === "I`m a Man" ? true : false;
 
   const replyMessage =  Bot.Message.text("Are you married or you have a wedding date?");
   replyMessage.addResponseKeyboard(["Married", "Not married","Have a wedding date"]);
@@ -48,11 +47,10 @@ bot.onTextMessage(/Woman|Man/,(message) => {
 
 bot.onTextMessage(/Married|Not\smarried|Have\sa\swedding\sdate/,(message) => {
 
+  per.setMarried = message.body === "Not married" ? false : true;
 
   const replyMessage =  Bot.Message.text("How many childrens do you have?");
-
   replyMessage.addResponseKeyboard(["0","1","2","3","4","5"]);
-
   bot.send(replyMessage, message.from);
 
 });
@@ -60,22 +58,20 @@ bot.onTextMessage(/Married|Not\smarried|Have\sa\swedding\sdate/,(message) => {
 
 bot.onTextMessage(/^0$|^1$|^2$|^3$|^4$|^5$/,(message) => {
 
+  per.kids = message.body;
 
   const replyMessage =  Bot.Message.text("Do you have a manager inssurance before 2001?");
-
   replyMessage.addResponseKeyboard(["I have","I don't have"]);
-
   bot.send(replyMessage, message.from);
 
 });
 
 bot.onTextMessage(/I have|I\sdon't\shave/,(message) => {
 
+  per.setHasOldMI = message.body === "I have" ? true : false;
 
   const replyMessage =  Bot.Message.text("Do you believe in the next 30 years humans will live up to age 100 ?");
-
   replyMessage.addResponseKeyboard(["Will live","Won't live"]);
-
   bot.send(replyMessage, message.from);
 
 });
@@ -83,12 +79,14 @@ bot.onTextMessage(/I have|I\sdon't\shave/,(message) => {
 
 bot.onTextMessage(/live/,(message) => {
 
+  per.oldAge = message.body === "Will live" ? true : false;
 
   const replyMessage =  Bot.Message.text("What is your salary?");
-
   replyMessage.addResponseKeyboard(["Under 20K","Above 20K"]);
-
   bot.send(replyMessage, message.from);
+
+  per.lowSalary = message.body === "Under 20K" ? true : false;
+  per.displayPerson();
 
 });
 // Set up your server and start listening

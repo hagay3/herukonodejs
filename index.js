@@ -40,7 +40,7 @@ bot.onTextMessage(/Woman|Man/,(message) => {
 
 });
 
-bot.onTextMessage(/Married|Not married/,(message) => {
+bot.onTextMessage(/married/i,(message) => {
 
 
   const replyMessage =  Bot.Message.text("How many childrens do you have?");

@@ -17,12 +17,12 @@ module.exports = {
       return "according to your response -  a managers insurance is the right choise for you, please consider purchasing IDI Managers insurance , Generic track, it had the highest yields in the last 8 & 5 years, according to bituach-net";
     }
     person.setLink = "http://www.eku.co.il/%D7%9E%D7%A7%D7%93%D7%9E%D7%99-%D7%A7%D7%A6%D7%91%D7%94-%D7%9E%D7%95%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%91%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%9E%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9C%D7%90-%D7%91%D7%98/";
-    if(isLowSalary) {
+    if (isLowSalary === true) {
       return this.resultfullPension(!isMarried);
     }
-    if (!isLowSalary) {
+    if (isLowSalary === false) {
       let result =  "Please deposit to one of the following Pension funds upto to the salary allowed limit:" + this.pensioFunds();
-      return result +" , the rest of your salary sholud be depoistied to a Yalin Lapidot Provident Fund (kupat gemel), Stocks track, its yields are highest in the last 5 years, according to gemel-net";
+      return result +"\n\nthe rest of your salary sholud be depoistied to a Yalin Lapidot Provident Fund (kupat gemel), Stocks track, its yields are highest in the last 5 years, according to gemel-net";
     }
   },
   pensioFunds: function (isSingle) {
@@ -34,7 +34,7 @@ module.exports = {
 
   },
   resultfullPension: function(isSingle) {
-    let result =  "Please deposit to one of the folliwing Pension funds:" + this.pensioFunds();
+    let result =  "Please deposit to one of the folliwing Pension funds:" + this.pensioFunds(isSingle);
 
 
     return result

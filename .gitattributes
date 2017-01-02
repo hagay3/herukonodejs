@@ -5,4 +5,5 @@ Procfile linguist-vendored=false
 README.md linguist-vendored=false
 app.json linguist-vendored=false
 package.json linguist-vendored=false
+.env linguist-vendored=false
 

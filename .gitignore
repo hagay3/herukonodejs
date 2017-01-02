@@ -1,3 +1,4 @@
 # don't ignore this file
 !.gitignore
 .idea
+.DS_Store
